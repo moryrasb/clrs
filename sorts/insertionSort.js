@@ -1,5 +1,7 @@
 //  efficient algorithm for sorting a small number of elements
 // elements a[0] to a[i-1] is our loop invariant
+// best case the input array is already sorted: linear function o(n). worst case the input array is reverse sorted quadratic function o(n2)
+// average case input array is some random placed numbers and its quadratic function o(n2)
 export const insertionSortWhile = (array, n) => {
     for (let i = 1; i < n; i++) {
         let key = array[i];
@@ -7,8 +9,8 @@ export const insertionSortWhile = (array, n) => {
         while (j>=0 && array[j]>key) {
             array[j+1] = array[j];
             j--;
-            array[j+1] = key;
-        }
+             }
+        array[j+1] = key;
     }
 };
 export const insertionSortFor = (array, n) => {
