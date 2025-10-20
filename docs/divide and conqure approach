@@ -1,0 +1,67 @@
+Divide and Conquer — Overview
+
+The divide and conquer approach is based on the idea of solving a large problem by dividing it into smaller subproblems,
+ solving each subproblem recursively, and then combining their results to get the final answer.
+
+It’s like solving a puzzle by breaking it into smaller pieces first.
+
+The Three Steps
+
+Every divide-and-conquer algorithm follows three main steps:
+
+Divide 🪓
+
+Break the problem into several smaller subproblems of the same type.
+
+Usually, each subproblem is a fraction of the size of the original one.
+
+Conquer ⚔️
+
+Solve each subproblem recursively.
+
+If a subproblem is small enough (base case), solve it directly.
+
+Combine 🧩
+
+Merge or combine the results of the subproblems to form the solution to the original problem.
+
+💡 Example 1: Merge Sort
+
+Let’s take the Merge Sort algorithm — a perfect example of divide and conquer.
+
+Steps:
+
+Divide:
+Split the array A[1..n] into two halves:
+
+Left: A[1..n/2]
+
+Right: A[n/2+1..n]
+
+Conquer:
+Recursively sort both halves.
+
+Combine:
+Merge the two sorted halves into a single sorted array.
+
+Pseudocode:
+MERGE-SORT(A, p, r)
+1 if p < r
+2     q = ⌊(p + r) / 2⌋
+3     MERGE-SORT(A, p, q)
+4     MERGE-SORT(A, q + 1, r)
+5     MERGE(A, p, q, r)
+
+Feature	Description
+Structure	Recursive
+Efficiency	Reduces time complexity from quadratic → logarithmic (often)
+Base case	Smallest subproblem solved directly
+Examples	Merge Sort, Quick Sort, Binary Search, Matrix Multiplication (Strassen), FFT
+
+Summary
+Step	Description	Example (Merge Sort)
+Divide	Split problem into subproblems	Split array in half
+Conquer	Solve subproblems recursively	Sort each half
+Combine	Merge results	Merge sorted halves
+Recurrence	T(n) = aT(n/b) + f(n)	T(n) = 2T(n/2) + Θ(n)
+

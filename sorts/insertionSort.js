@@ -2,6 +2,9 @@
 // elements a[0] to a[i-1] is our loop invariant
 // best case the input array is already sorted: linear function o(n). worst case the input array is reverse sorted quadratic function o(n2)
 // average case input array is some random placed numbers and its quadratic function o(n2)
+
+// insertion sort uses design pattern "incremental" method
+
 export const insertionSortWhile = (array, n) => {
     for (let i = 1; i < n; i++) {
         let key = array[i];

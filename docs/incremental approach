@@ -1,0 +1,64 @@
+1- incremental :
+The incremental method (also called incremental approach or incremental algorithm design) is a problem-solving strategy
+where you build the solution step by step, gradually extending a smaller solution to handle larger or more complex cases.
+
+Instead of trying to solve the full problem at once, you:
+
+Solve a smaller or simpler instance of the problem.
+
+Then, extend that solution incrementally to include one more element or step.
+
+Repeat until the entire problem is solved.
+
+You build the solution incrementally, maintaining correctness at each step — usually by using a loop invariant or a
+ well-defined partial structure that remains valid as you grow it.
+
+used for :This method is especially common in algorithms that gradually construct
+sorted lists,
+minimum spanning trees,
+or shortest paths.
+
+Examples
+
+1- Insertion Sort, selection sort
+
+Builds a sorted array one element at a time.
+
+At iteration i, it assumes the first i−1 elements are sorted and inserts the i-th element into its correct position.
+
+The loop invariant expresses that the first i−1 elements are always sorted before each step.
+
+2- Prim’s Algorithm (for MST)
+
+Starts with a single vertex and incrementally adds edges that connect a new vertex to the growing tree.
+
+At each step, the current tree remains a valid minimum spanning tree of the vertices processed so far.
+
+3- Dijkstra’s Algorithm
+
+Incrementally builds the shortest-path set of vertices from the source.
+
+At each step, it adds one vertex with the smallest tentative distance.
+
+Why It’s Useful
+
+Easier to prove correctness: Because you can define a loop invariant for each incremental step.
+
+Stepwise improvement: You can see how each added part contributes to the overall goal.
+
+Modular reasoning: Each stage of construction is logically self-contained.
+
+General pattern :
+Start with an initial simple solution S0
+for each element or step i from 1 to n:
+    extend Si−1 to Si
+    maintain correctness (loop invariant)
+return Sn as the full solution
+
+Concept	Description
+Idea	Build solution gradually from smaller parts
+Used in	Insertion Sort, Prim’s, Dijkstra’s
+Proof Tool	Loop invariant (ensures correctness at each step)
+Advantage	Easier reasoning, modular development
+Pattern	Solve for small case → extend → repeat
+

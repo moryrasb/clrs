@@ -43,6 +43,9 @@ Loop Invariant: A[1..i−1] is sorted and contains the i−1 smallest elements.
 Why stop at n−1: The last element is automatically the largest.
 Worst-case time: Θ(n²)
 Best-case time: Θ(n²)
+
+selection sort uses design pattern "incremental" method
+
 * */
 
 export const SelectionSort = (array, n) => {
