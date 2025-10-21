@@ -9,6 +9,7 @@ import {
 import {linearSearch} from "./searches/linearSearch.js";
 import {addBinary, addBinaryWithConvert} from "./etc/AddBinary.js";
 import {SelectionSort} from "./sorts/selectionSort.js";
+import {mergeSort} from "./sorts/mergeSort.js";
 const array = unSortedArraySmall;
 // insertionSortWhile(array, array.length);
 // insertionSortFor(array, array.length);
@@ -20,7 +21,8 @@ const start = performance.now();
 //const result = addBinaryWithConvert(binarryNumber1,binaryNumber2, 8);
 //insertionSortWhile(array, array.length);
 //insertionSortFor(array, array.length);
-SelectionSort(array,array.length);
+//SelectionSort(array,array.length);
+mergeSort(array,0,10);
 console.log("sorted array: ", array);
 const end = performance.now();
 console.log(`Execution time: ${end - start} ms`);
