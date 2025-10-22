@@ -2,7 +2,7 @@ import {binarryNumber1, binaryNumber2, unSortedArraySmall} from "./data/data.js"
 import { performance } from "node:perf_hooks";
 import {
 
-    insertionSortDescending,
+    insertionSortDescending, recursiveInsertionSort,
     insertionSortFor,
     insertionSortWhile
 } from "./sorts/insertionSort.js";
@@ -22,7 +22,8 @@ const start = performance.now();
 //insertionSortWhile(array, array.length);
 //insertionSortFor(array, array.length);
 //SelectionSort(array,array.length);
-mergeSort(array,0,10);
+ //mergeSort(array,0,10);
+recursiveInsertionSort(array,11);
 console.log("sorted array: ", array);
 const end = performance.now();
 console.log(`Execution time: ${end - start} ms`);
