@@ -1,4 +1,5 @@
 Divide and Conquer — Overview
+or recursive method
 
 The divide and conquer approach is based on the idea of solving a large problem by dividing it into smaller subproblems,
  solving each subproblem recursively, and then combining their results to get the final answer.
